@@ -12,7 +12,7 @@ SoftPlans is a client-side application written in HTML, CSS and JavaScript ES mo
 | `src/core/search.js`          | Normalize queries, match task metadata and calculate safe highlight offsets                 |
 | `src/core/storage.js`         | Validate the workspace schema, read legacy storage, and serialize backups                   |
 | `src/core/workspace-store.js` | Track the last successfully saved snapshot and reject failed writes                         |
-| `src/core/demo-data.js`       | Create optional sample data with fresh IDs and dates relative to today                      |
+| `src/core/demo-data.js`       | Create initial sample data with fresh IDs and dates relative to today                       |
 | `src/ui/`                     | Encapsulate pickers, completion animation, group sorting, notifications and backup controls |
 | `src/i18n/`                   | Supply matching translation keys for all three languages                                    |
 | `src/styles/`                 | Import design tokens and component, theme, desktop and responsive styles in a fixed order   |
@@ -21,7 +21,7 @@ SoftPlans is a client-side application written in HTML, CSS and JavaScript ES mo
 
 1. Read the versioned workspace from `softplans.workspace.v1`.
 2. If it is absent, read the earlier `softplans.tasks.v1` and `softplans.groups.v1` keys. Normalize valid legacy entries, recognized colors and orphaned group references without modifying the original keys.
-3. If there are no saved entries, start empty. The demo is created only by the **Try demo** action in a completely empty workspace.
+3. If there is no current or legacy workspace, the application creates and saves the initial sample tasks and groups once. Saved workspaces, including intentionally empty ones, keep their existing contents. Unreadable or unavailable storage never triggers sample initialization.
 4. Validate and save tasks and groups together in one `localStorage.setItem` call after an edit. The new workspace key takes precedence over legacy keys.
 5. Commit the in-memory snapshot only after a successful write. Restore the previous snapshot when a save fails; keep form drafts available and report the error.
 6. Listen for storage events from other tabs, retaining the last good snapshot if newly stored data is unreadable. The latest saved workspace wins; there is no conflict-merging service.

@@ -26,33 +26,92 @@ A responsive task planner with custom groups, scheduling, three interface langua
 - **Make it yours:** English, Ukrainian and Russian interfaces, persistent light and dark themes, and a collapsible desktop sidebar.
 - **Keep a copy:** export and restore validated JSON backups; unreadable storage offers a recovery download before reset.
 
-A new workspace starts empty. Select **Try demo** to explore sample tasks and groups. Demo data is optional and never replaces an existing workspace.
+On your first visit, SoftPlans creates a small sample workspace with groups, scheduled tasks and completion history. Your edits persist across reloads. You can edit or delete the examples like any other tasks; they are added only once.
 
 ## Screenshots
 
-Real browser captures of the optional demo workspace. Screenshots in each row use the same viewport size.
+Desktop, tablet and mobile views. Select an image to open its full resolution. Expand the galleries to explore additional features.
 
 ### Desktop
 
-|                                                     Workspace                                                      |                                                           Schedule                                                           |
-| :----------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
-| <img src="docs/screenshots/desktop-overview.webp" alt="SoftPlans workspace with custom task groups" width="640" /> | <img src="docs/screenshots/desktop-scheduled.webp" alt="Scheduled tasks organized by date and overdue status" width="640" /> |
+**Workspace**
 
-|                                                         Date picker                                                          |                                              Dark theme                                              |
-| :--------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: |
-| <img src="docs/screenshots/desktop-date-picker.webp" alt="Calendar with date presets and keyboard navigation" width="640" /> | <img src="docs/screenshots/desktop-dark.webp" alt="Scheduled tasks in the dark theme" width="640" /> |
+[![SoftPlans workspace with sample tasks and custom groups](docs/screenshots/desktop-overview.webp)](docs/screenshots/desktop-overview.webp)
+
+<details>
+<summary>More desktop views: planning, search, editing, calendar and dark theme</summary>
+
+**Today**
+
+[![Today’s tasks grouped by overdue status and time](docs/screenshots/desktop-today.webp)](docs/screenshots/desktop-today.webp)
+
+**Schedule**
+
+[![Upcoming tasks grouped by date](docs/screenshots/desktop-scheduled.webp)](docs/screenshots/desktop-scheduled.webp)
+
+**Important**
+
+[![Flagged tasks with their groups and dates](docs/screenshots/desktop-important.webp)](docs/screenshots/desktop-important.webp)
+
+**Search**
+
+[![Search results with highlighted matching text](docs/screenshots/desktop-search.webp)](docs/screenshots/desktop-search.webp)
+
+**Task editor**
+
+[![Task editor with a fully blurred workspace behind it](docs/screenshots/desktop-task-editor.webp)](docs/screenshots/desktop-task-editor.webp)
+
+**Calendar**
+
+[![Calendar with date presets and keyboard navigation](docs/screenshots/desktop-date-picker.webp)](docs/screenshots/desktop-date-picker.webp)
+
+**Dark theme**
+
+[![Today’s tasks in the dark theme](docs/screenshots/desktop-dark.webp)](docs/screenshots/desktop-dark.webp)
+
+</details>
 
 ### Mobile
 
-|                                                           Workspace                                                           |                                                          Task editor                                                           |
-| :---------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
-| <img src="docs/screenshots/mobile-overview.webp" alt="Mobile workspace with group chips and bottom navigation" width="320" /> | <img src="docs/screenshots/mobile-task-editor.webp" alt="Mobile task editor with date, time and group controls" width="320" /> |
+|                                                                               Workspace                                                                                |                                                                                Task editor                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="docs/screenshots/mobile-overview.webp" alt="Mobile workspace with group chips and bottom navigation" width="360" />](docs/screenshots/mobile-overview.webp) | [<img src="docs/screenshots/mobile-task-editor.webp" alt="Mobile task editor with date, time and group controls" width="360" />](docs/screenshots/mobile-task-editor.webp) |
+
+<details>
+<summary>More mobile views: task composer, calendar, history and settings</summary>
+
+|                                                                            Task composer                                                                            |                                                                            Calendar                                                                             |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="docs/screenshots/mobile-task-composer.webp" alt="Mobile task composer with a new task draft" width="360" />](docs/screenshots/mobile-task-composer.webp) | [<img src="docs/screenshots/mobile-date-picker.webp" alt="Date picker above the mobile task composer" width="360" />](docs/screenshots/mobile-date-picker.webp) |
+
+|                                                                      Completed tasks                                                                      |                                                                         Dark theme and settings                                                                          |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="docs/screenshots/mobile-completed.webp" alt="Mobile completion history grouped by day" width="360" />](docs/screenshots/mobile-completed.webp) | [<img src="docs/screenshots/mobile-dark-settings.webp" alt="Mobile language and theme settings in dark mode" width="360" />](docs/screenshots/mobile-dark-settings.webp) |
+
+</details>
 
 ### Tablet
 
-|                                            Today                                             |                                                     Backups                                                      |
-| :------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
-| <img src="docs/screenshots/tablet-today.webp" alt="Today's tasks on a tablet" width="640" /> | <img src="docs/screenshots/tablet-backups.webp" alt="Export and import backup dialog on a tablet" width="640" /> |
+**Today**
+
+[![Today’s tasks on a tablet](docs/screenshots/tablet-today.webp)](docs/screenshots/tablet-today.webp)
+
+<details>
+<summary>More tablet views: groups, history and backups</summary>
+
+**Custom group**
+
+[![Design group with upcoming and unscheduled tasks](docs/screenshots/tablet-design-group.webp)](docs/screenshots/tablet-design-group.webp)
+
+**Completed tasks**
+
+[![Completion history grouped by day on a tablet](docs/screenshots/tablet-completed.webp)](docs/screenshots/tablet-completed.webp)
+
+**Backups**
+
+[![Export and import dialog with the workspace blurred behind it](docs/screenshots/tablet-backups.webp)](docs/screenshots/tablet-backups.webp)
+
+</details>
 
 ## Getting started
 
@@ -78,16 +137,16 @@ Open **http://127.0.0.1:4173/**. Use the development or preview server when runn
 
 ## Commands
 
-| Command               | Purpose                                                             |
-| --------------------- | ------------------------------------------------------------------- |
-| `npm run dev`         | Start the Vite development server                                   |
-| `npm run build`       | Build the production site in `dist/`                                |
-| `npm run preview`     | Serve the production build locally                                  |
-| `npm run check`       | Run ESLint, formatting checks and unit tests                        |
-| `npm run test:e2e`    | Build and test the app in Chromium, mobile Chromium and WebKit      |
-| `npm run format`      | Format source files and documentation                               |
-| `npm run screenshots` | Refresh the eight README screenshots against the development server |
-| `npm run icons`       | Generate PNG app icons from the SVG source                          |
+| Command               | Purpose                                                        |
+| --------------------- | -------------------------------------------------------------- |
+| `npm run dev`         | Start the Vite development server                              |
+| `npm run build`       | Build the production site in `dist/`                           |
+| `npm run preview`     | Serve the production build locally                             |
+| `npm run check`       | Run ESLint, formatting checks and unit tests                   |
+| `npm run test:e2e`    | Build and test the app in Chromium, mobile Chromium and WebKit |
+| `npm run format`      | Format source files and documentation                          |
+| `npm run screenshots` | Refresh the README gallery against the development server      |
+| `npm run icons`       | Generate PNG app icons from the SVG source                     |
 
 Before running browser tests or regenerating screenshots and icons, install the browser engines once:
 
